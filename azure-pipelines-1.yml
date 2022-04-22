@@ -17,3 +17,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+  
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure subscription 1(50ac14dd-09f8-42a7-9e5d-185fc6078e58)'
+    subscriptionId: '50ac14dd-09f8-42a7-9e5d-185fc6078e58'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ubuntu-test_group'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/richwellman/testgit/blob/master/template.json'
+    csmParametersFileLink: 'https://github.com/richwellman/testgit/blob/master/parameters.json'
+    deploymentMode: 'Validation'
