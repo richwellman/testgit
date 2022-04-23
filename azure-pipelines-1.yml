@@ -28,5 +28,4 @@ steps:
     location: 'East US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/richwellman/testgit/blob/master/template.json'
-    csmParametersFileLink: 'https://github.com/richwellman/testgit/blob/master/parameters.json'
     deploymentMode: 'Validation'
